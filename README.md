@@ -6,6 +6,24 @@ To-Do-List Component This is a simple componentfor building a to-do-list using a
 </p>
 For preview , [Click here](https://stackblitz.com/edit/angular-c3k3vm?embed=1&file=app/list/list.component.html)
 
+
+## Using the project
+
+Download the to-do-list folder and install the required packages and run the application. 
+
+### Installing
+
+```
+> npm install
+```
+
+### Run server
+
+```
+> ng serve
+```
+
+
 ## Adding a new task
 Write the task you want to do and click on the plus button then it will be added to your task list. 
 
