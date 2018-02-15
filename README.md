@@ -4,6 +4,7 @@ To-Do-List Component This is a simple componentfor building a to-do-list using a
 <p align="center">
     <img  alt="To-Do-List" src="img/todoimg.png" class="img-responsive">
 </p>
+For preview , [Click here](https://stackblitz.com/edit/angular-c3k3vm?embed=1&file=app/list/list.component.html)
 
 ## Adding a new task
 Write the task you want to do and click on the plus button then it will be added to your task list. 
