@@ -1,0 +1,31 @@
+
+<div class="jumbotron" style="padding:45px 0px">
+  <h1 class="text-center">TO-DO-LIST</h1>
+</div>
+<div class="input-group">
+  <input type="text" class="form-control" [(ngModel)]="name" #myVar>
+  <div class="input-group-addon hover-cursor" (click)="addItem(myVar.value)">
+    <i class="fas fa-plus-circle fa-2x"></i>
+    </div>
+</div>
+<div class="error" name="error" [(ngModel)]="error" ngDefaultControl>{{error}}</div>
+<div style="margin:5px 0px">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let i of lists" [ngClass]="{'completed':i.status ,'compulsory':compulsory}">
+      <span class="hover-cursor">
+          <input class="hover-cursor" type="checkbox" (change)="changed(i.status)" [(ngModel)]="i.status">
+      </span>
+      {{i.desc}}
+      <span class="hover-cursor text-danger pull-right" (click)="deleteItem(i)">
+        <button type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </span>
+    </li>
+  </ul>
+</div>
+
+<div class="display">{{count}} of {{lists.length}} tasks completed</div>
+
+
+

@@ -1,0 +1,11 @@
+.completed{
+    text-decoration: line-through;
+    color:red;
+}
+
+.error{
+    color:red;
+}
+.display{
+   text-align: center;
+}
