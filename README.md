@@ -1,6 +1,10 @@
 # Todolist in angular and bootstrap
 To-Do-List Component This is a simple componentfor building a to-do-list using angular and bootstrap. You can add all your task in this list and check the box when You completed a specific task.
 
+<p align="center">
+    <img  alt="To-Do-List" src="img/todoimg.png" class="img-responsive">
+</p>
+
 ## Adding a new task
 Write the task you want to do and click on the plus button then it will be added to your task list. 
 
