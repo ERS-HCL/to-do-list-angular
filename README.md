@@ -25,14 +25,19 @@ just copy and paste this in md
 @Output has been used to provide user with required output.For this i have used EventEmitter, whenever some event will be called user will get result.
 
 getList(lists){
+
        for(let i=0;i<lists.length;i++){
+       
       console.log(lists[i].desc);
     }
    
   }
   
-  This method will give all the lists.
+ 
+ This method will give all the lists.
   
   <list [userList]="lists" (mylist)="getList($event)"></list>
+  
+  
   mylist is the output event name i have used.
 
