@@ -18,6 +18,8 @@ just copy and paste this in md
   <list [userList]="lists" (mylist)="getList($event)"></list>
   userList is the input.
   lists is an array of objects what user will give.
+  
+  
   Ex:-
   {'id':1,'desc':'angular','status':false}
   
