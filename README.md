@@ -42,11 +42,16 @@ Check the box when you completed the task and it will sort your whole list. It c
   
   userList is the input for to-do-list of type List.
   
-  export interface List {
+  ### List Interface
+
+```typescript
+
+List {
   id: number;
   desc: string;
   status: boolean;
 }
+  
   
   
   lists is an array of objects what user will give.
