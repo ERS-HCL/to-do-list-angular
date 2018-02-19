@@ -1,5 +1,5 @@
 import { Component, OnInit,EventEmitter,Output,Input,ViewEncapsulation } from '@angular/core';
-import { error } from 'util';
+
 
 
 @Component({
@@ -9,25 +9,29 @@ import { error } from 'util';
   encapsulation:ViewEncapsulation.Emulated
 })
 export class ListComponent implements OnInit{
-   public lists= [];
-  public status=false;
-  public count=0;
-  public name;
-  public error;
-  public completedItems=0;
-  @Input() public userList;
- @Output() public mylist=new EventEmitter();
+   private lists= [];
+  private status=false;
+  private count=0;
+  private name;
+  private error;
+  private completedItems=0;
+  @Input() private userList:List[];
+ @Output('mylist') private mylist:EventEmitter<List[]>=new EventEmitter<List[]>();
+
   constructor() {}
 
   ngOnInit() {
-   if(this.userList!=""){
-     this.lists=this.userList;
+   if (this.userList == undefined || this.userList == null) {
+      this.userList = [];
+    }
+   else{
+      this.lists=this.userList;
    }
     this.name=name;
     this.mylist.emit(this.lists);
   }
  
-  addItem(item){
+  private addItem(item){
     this.error="";
         if(item!=""){
    
@@ -47,7 +51,7 @@ export class ListComponent implements OnInit{
   });
   
      }
-  deleteItem(item){
+  private deleteItem(item){
     for(let i=0;i<this.lists.length;i++){
       if(this.lists[i]==item){
         this.lists.splice(i,1);
@@ -56,7 +60,7 @@ export class ListComponent implements OnInit{
     }
     this.mylist.emit(this.lists);
   }
-changed(itemStatus){
+private changed(itemStatus){
   if(itemStatus==true){
     this.count=this.count+1;
   }
@@ -66,7 +70,7 @@ changed(itemStatus){
   this.mylist.emit(this.lists);
 }
 
-getCompletedList(){
+ public getCompletedList(){
   for(let i=0;i<this.lists.length;i++){
     if(this.lists[i].staus==true){
       this.completedItems=this.completedItems+1;
@@ -76,4 +80,10 @@ getCompletedList(){
 }
 
 
+}
+
+export interface List {
+  id: number;
+  desc: string;
+  status: boolean;
 }
