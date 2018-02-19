@@ -62,7 +62,7 @@ List {
   
 ## @Output Decorator
 
-@Output has been used to provide user with required output.For this i have used EventEmitter.
+@Output has been used to provide user with required output.For this I have used EventEmitter.
 
 getList(lists){
 
