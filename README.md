@@ -39,8 +39,9 @@ Check the box when you completed the task and it will sort your whole list. It c
 @Input has been used to receive input from user.User will pass an array containing 'id','desc' and 'status' and it will be added to the list.
 
   <list [userList]="lists" (mylist)="getList($event)"></list>
-  userList is the input.
   
+  userList is the input for to-do-list of type List
+  
   lists is an array of objects what user will give.
   
   
@@ -66,5 +67,5 @@ getList(lists){
   <list [userList]="lists" (mylist)="getList($event)"></list>
   
   
-  mylist is the output event name i have used.
+  mylist is the output event name I have used.
 
